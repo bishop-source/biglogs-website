@@ -15,10 +15,31 @@ const grid=document.getElementById("serviceGrid"),search=document.getElementById
 function render(list){grid.innerHTML=list.map((s,i)=>`<article class="card"><div class="icon">${s.icon?`<img src="assets/${s.icon}" alt="${s.name} logo">`:`<span style='color:#f5d77a;font-size:30px'>+</span>`}</div><h3>${s.name}</h3><p>${s.desc}</p><div class="price">${s.price}</div><div class="service-actions"><button class="view-service" data-index="${services.indexOf(s)}">VIEW SERVICE →</button><a class="order" href="https://t.me/biglogs1" target="_blank" rel="noopener">ORDER →</a></div></article>`).join("");
   document.querySelectorAll('.view-service').forEach(btn=>btn.addEventListener('click',()=>openService(Number(btn.dataset.index))));
 }
-function openService(index){const s=services[index];modalIcon.innerHTML=s.icon?`<img src="assets/${s.icon}" alt="">`:`<span style='color:#f5d77a;font-size:38px'>+</span>`;modalTitle.textContent=s.name;modalDesc.textContent=s.desc;modalPrice.textContent=s.price;modalDetails.innerHTML = s.packages
-  ? s.packages.map(pkg=>`<li class="package-item"><strong>${pkg.name}</strong><span>${pkg.price}</span><small>${pkg.desc}</small></li>`).join('')
-  : `<li>${s.details}</li><li>Confirm the final price and availability with BigLogs support.</li><li>Orders are handled through Telegram rather than on-site payment.</li>`;modalOrder.href=`https://t.me/biglogs1`;modal.classList.add('open');document.body.style.overflow='hidden';}
-function closeModal(){modal.classList.remove('open');document.body.style.overflow='';}
+function openService(index){
+  const s=services[index];
+  modalIcon.innerHTML=s.icon?`<img src="assets/${s.icon}" alt="">`:"";
+  modalTitle.textContent=s.name;
+  modalDesc.textContent=s.desc;
+  modalPrice.textContent=s.price;
+
+  const product=s.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  modalDetails.innerHTML=s.packages
+    ? s.packages.map(pkg=>`<li class="package-item"><strong>${pkg.name}</strong><span>${pkg.price}</span></li>`).join("")
+    : `<li>${s.details}</li>`;
+
+  modalDetails.innerHTML+=`
+    <li class="order-item">
+      <a class="telegram-order"
+         href="https://t.me/biglogs1?start=${product}"
+         target="_blank"
+         rel="noopener">
+         🛒 Order on Telegram
+      </a>
+    </li>`;
+
+  modal.classList.add("open");
+  document.body.style.overflow="hidden";
+}
 render(services);
 search.addEventListener("input",e=>{const q=e.target.value.toLowerCase().trim();render(services.filter(s=>(s.name+" "+s.desc).toLowerCase().includes(q)))});
 document.addEventListener('click',e=>{if(e.target.matches('[data-close]')||e.target===modal)closeModal()});
