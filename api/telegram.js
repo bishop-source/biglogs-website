@@ -7,14 +7,22 @@ export default async function handler(req, res) {
   const update = req.body;
 
   if (!token) {
-    return res.status(500).json({ error: "Telegram bot token is missing" });
+    return res.status(500).json({
+      error: "Telegram bot token is missing"
+    });
   }
 
   if (update.message) {
     const chatId = update.message.chat.id;
     const text = update.message.text || "";
 
-    if (text === "/start") {
+    if (text.startsWith("/start")) {
+      const product = text.replace("/start", "").trim();
+
+      const message = product
+        ? `👋 Welcome to BigLogs!\n\n🛍️ *${product}*\n\nYou've selected this product on our website.\n\nLet's get your order started.`
+        : `👋 Welcome to BigLogs!\n\nYour selected product will appear here. Let's get your order started.`;
+
       await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: "POST",
         headers: {
@@ -22,7 +30,8 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           chat_id: chatId,
-          text: "👋 Welcome to BigLogs!\n\nYour selected product will appear here. Let's get your order started."
+          text: message,
+          parse_mode: "Markdown"
         })
       });
     }
