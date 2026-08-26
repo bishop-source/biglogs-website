@@ -8,3 +8,5 @@ Telegram: https://t.me/biglogs1
 Added in V9:
 - AI Video Call Tools card using the video-call icon.
 - Educational-purpose description and contact-for-price display.
+
+Updated for Vercel
