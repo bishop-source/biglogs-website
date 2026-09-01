@@ -1,707 +1,355 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#070808">
-  <title>BigLogs — Digital Marketplace</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIGLOGS — Digital Services</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- =========================
-     APP HEADER
-========================= -->
-<header class="app-header">
-  <div class="header-left">
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+<!-- HEADER -->
+<header class="nav">
+  <a class="brand" href="#home">
+    <img src="assets/biglogs-logo.jpg" alt="BIGLOGS">
+  </a>
 
-    <a href="#" class="app-brand" data-screen="home">
-      <img src="assets/biglogs-logo.jpg" alt="BigLogs">
-    </a>
-  </div>
+  <nav>
+    <a class="active" href="#home">Home</a>
+    <a href="#marketplace">Marketplace</a>
+    <a href="#orders">Orders</a>
+    <a href="#wallet">Wallet</a>
+    <a href="#account">Account</a>
+  </nav>
 
-  <div class="header-actions">
-    <button class="icon-btn" id="notificationBtn" aria-label="Notifications">
-      ♧
-    </button>
-
-    <button class="cart-btn" id="cartBtn" aria-label="Cart">
-      🛒
-      <span id="cartCount">0</span>
-    </button>
-  </div>
+  <a class="telegram-btn" href="https://t.me/biglogs1" target="_blank" rel="noopener">
+    ✈ Telegram Support
+  </a>
 </header>
 
 
-<!-- =========================
-     SIDEBAR
-========================= -->
-<aside class="sidebar" id="sidebar">
+<main>
 
-  <div class="sidebar-profile">
-    <div class="profile-avatar">B</div>
-    <div>
-      <small>Welcome back,</small>
-      <strong>Bigbishop</strong>
+<!-- HOME -->
+<section id="home" class="hero">
+
+  <div class="hero-copy">
+
+    <span class="eyebrow">● BIGGER BEGINNINGS</span>
+
+    <h1>
+      SMART DIGITAL<br>
+      <em>SOLUTIONS</em>
+    </h1>
+
+    <p>
+      Top-quality digital products and services at competitive prices,
+      with fast delivery and direct customer support.
+    </p>
+
+    <div class="edu-note">
+      🎓 <b>Educational purposes only.</b>
+      This platform prototype is for learning, research,
+      demonstrations and authorized services.
+    </div>
+
+    <div class="hero-actions">
+      <a class="primary-btn" href="#marketplace">
+        SHOP NOW →
+      </a>
+
+      <a class="secondary-btn" href="#wallet">
+        FUND WALLET
+      </a>
+    </div>
+
+    <div class="trust-row">
+      <span>◈ Secure &amp; Reliable</span>
+      <span>ϟ Instant Delivery</span>
+      <span>♧ 24/7 Support</span>
+    </div>
+
+  </div>
+
+
+  <div class="hero-art" aria-hidden="true">
+    <div class="glow"></div>
+    <div class="orb"></div>
+
+    <div class="laptop">
+      <div class="screen">
+        BIGLOGS
+        <small>BIGGER BEGINNINGS</small>
+      </div>
+    </div>
+
+    <div class="phone">
+      <div></div>
+    </div>
+
+    <div class="badge">
+      <b>24/7</b>
+      <small>SUPPORT</small>
     </div>
   </div>
 
-  <nav class="sidebar-nav">
-
-    <button class="side-link active" data-screen="home">
-      <span>⌂</span>
-      Home
-    </button>
-
-    <button class="side-link" data-screen="marketplace">
-      <span>▣</span>
-      Marketplace
-    </button>
-
-    <button class="side-link" data-screen="orders">
-      <span>▤</span>
-      My Orders
-    </button>
-
-    <button class="side-link" data-screen="wallet">
-      <span>▣</span>
-      Wallet
-    </button>
-
-    <button class="side-link" data-screen="account">
-      <span>♙</span>
-      Account
-    </button>
-
-  </nav>
-
-  <div class="sidebar-support">
-    <span>Need help?</span>
-    <a href="https://t.me/biglogs1" target="_blank" rel="noopener">
-      Contact Support
-    </a>
-  </div>
-
-</aside>
+</section>
 
 
-<!-- =========================
-     MAIN APP
-========================= -->
-<main class="app-main">
+<!-- CUSTOMER DASHBOARD -->
+<section class="dashboard-section">
 
-
-<!-- =========================
-     HOME / DASHBOARD
-========================= -->
-<section id="screen-home" class="app-screen active-screen">
-
-  <div class="dashboard-welcome">
+  <div class="dashboard-header">
     <div>
-      <span class="eyebrow">BIGLOGS</span>
-      <h1>Welcome back, <strong>Bigbishop</strong></h1>
-      <p>Manage your digital services, wallet and orders.</p>
+      <span class="eyebrow">CUSTOMER DASHBOARD</span>
+      <h2>Welcome back, <em>Bigbishop</em></h2>
     </div>
 
-    <div class="profile-avatar large">B</div>
+    <div class="profile-circle">B</div>
   </div>
 
 
-  <!-- Wallet overview -->
+  <!-- WALLET OVERVIEW -->
   <div class="wallet-overview">
 
     <div class="balance-card">
-      <div class="balance-top">
-        <span>Wallet Balance</span>
-        <span class="wallet-icon">▣</span>
-      </div>
-
-      <strong id="homeBalance">₦2,250.00</strong>
-
-      <button class="small-gold-btn" data-screen="wallet">
-        Fund Wallet
-      </button>
+      <span>Wallet Balance</span>
+      <strong>₦2,250.00</strong>
     </div>
 
     <div class="stat-card">
+      <strong>7</strong>
       <span>Total Orders</span>
-      <strong id="totalOrders">7</strong>
     </div>
 
     <div class="stat-card">
-      <span>Total Spent</span>
       <strong>₦10,465.00</strong>
+      <span>Total Spent</span>
     </div>
 
     <div class="stat-card">
-      <span>Total Deposits</span>
       <strong>₦10,467.25</strong>
+      <span>Total Deposits</span>
     </div>
 
     <div class="stat-card">
+      <strong>2</strong>
       <span>Pending Orders</span>
-      <strong id="pendingOrders">2</strong>
     </div>
 
   </div>
 
 
-  <!-- Quick actions -->
-  <div class="section-title-row">
-    <div>
-      <span class="eyebrow">QUICK ACTIONS</span>
-      <h2>What would you like to do?</h2>
-    </div>
-  </div>
-
+  <!-- QUICK ACTIONS -->
   <div class="quick-actions">
 
-    <button class="quick-action" data-screen="wallet">
-      <span>＋</span>
-      <div>
-        <strong>Fund Wallet</strong>
-        <small>Add money to your BigLogs wallet</small>
-      </div>
-      <b>›</b>
-    </button>
+    <h3>Quick Actions</h3>
 
-    <button class="quick-action" data-screen="marketplace">
-      <span>▣</span>
-      <div>
-        <strong>Browse Marketplace</strong>
-        <small>Explore available digital services</small>
-      </div>
-      <b>›</b>
-    </button>
+    <div class="quick-grid">
 
-    <button class="quick-action" data-screen="orders">
-      <span>▤</span>
-      <div>
-        <strong>My Orders</strong>
-        <small>View your previous purchases</small>
-      </div>
-      <b>›</b>
-    </button>
+      <a href="#wallet">
+        <span>＋</span>
+        <div>
+          <strong>Fund Wallet</strong>
+          <small>Add money to your wallet</small>
+        </div>
+      </a>
 
-  </div>
+      <a href="#marketplace">
+        <span>▦</span>
+        <div>
+          <strong>Browse Marketplace</strong>
+          <small>Explore digital services</small>
+        </div>
+      </a>
 
+      <a href="#orders">
+        <span>▣</span>
+        <div>
+          <strong>My Orders</strong>
+          <small>View your purchases</small>
+        </div>
+      </a>
 
-  <!-- Popular categories -->
-  <div class="section-title-row">
-    <div>
-      <span class="eyebrow">EXPLORE</span>
-      <h2>Popular Categories</h2>
     </div>
-
-    <button class="text-btn" data-screen="marketplace">
-      View all →
-    </button>
-  </div>
-
-  <div class="category-grid">
-
-    <button class="category-card" data-category="VPN">
-      <div class="category-icon">◉</div>
-      <strong>VPN</strong>
-      <small>Services</small>
-    </button>
-
-    <button class="category-card" data-category="Texting">
-      <div class="category-icon">✉</div>
-      <strong>Texting</strong>
-      <small>Apps</small>
-    </button>
-
-    <button class="category-card" data-category="Social">
-      <div class="category-icon">●</div>
-      <strong>Social</strong>
-      <small>Media</small>
-    </button>
-
-    <button class="category-card" data-category="Streaming">
-      <div class="category-icon">▶</div>
-      <strong>Streaming</strong>
-      <small>Services</small>
-    </button>
 
   </div>
 
 </section>
 
 
+<!-- MARKETPLACE -->
+<section id="marketplace" class="services-section">
 
-<!-- =========================
-     MARKETPLACE
-========================= -->
-<section id="screen-marketplace" class="app-screen">
+  <div class="section-head">
 
-  <div class="page-heading">
     <div>
-      <span class="eyebrow">BIGLOGS MARKETPLACE</span>
-      <h1>Marketplace</h1>
-      <p>Browse available digital services.</p>
+      <span class="eyebrow">MARKETPLACE</span>
+      <h2>Browse <em>Services</em></h2>
     </div>
+
+    <input
+      id="search"
+      type="search"
+      placeholder="Search products..."
+      aria-label="Search products"
+    >
+
   </div>
 
-  <div class="marketplace-toolbar">
 
-    <div class="search-box">
-      <span>⌕</span>
+  <div id="serviceGrid" class="service-grid"></div>
+
+  <p class="note">
+    Browse available products and services. Prices and availability
+    may change. Contact BigLogs support for package-specific details.
+  </p>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how">
+
+  <span class="eyebrow">SIMPLE PROCESS</span>
+
+  <h2>How It <em>Works</em></h2>
+
+  <div class="steps">
+
+    <div>
+      <b>01</b>
+      <h3>Choose a product</h3>
+      <p>
+        Browse the marketplace and select the digital service
+        you want.
+      </p>
+    </div>
+
+    <div>
+      <b>02</b>
+      <h3>Check your wallet</h3>
+      <p>
+        Make sure your wallet has enough balance for the purchase.
+      </p>
+    </div>
+
+    <div>
+      <b>03</b>
+      <h3>Place your order</h3>
+      <p>
+        Complete the purchase and receive your order details.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WALLET -->
+<section id="wallet" class="wallet-section">
+
+  <div class="section-head">
+
+    <div>
+      <span class="eyebrow">WALLET</span>
+      <h2>Fund Your <em>Wallet</em></h2>
+    </div>
+
+  </div>
+
+
+  <div class="wallet-panel">
+
+    <div class="current-balance">
+      <span>Current Balance</span>
+      <strong>₦2,250.00</strong>
+    </div>
+
+
+    <h3>Select Amount</h3>
+
+    <div class="amount-options">
+      <button>₦1,000</button>
+      <button>₦2,000</button>
+      <button>₦5,000</button>
+      <button>₦10,000</button>
+    </div>
+
+
+    <label for="walletAmount">Or enter amount</label>
+
+    <div class="amount-input">
+      <span>₦</span>
       <input
-        id="marketSearch"
-        type="search"
-        placeholder="Search products..."
-        autocomplete="off"
+        id="walletAmount"
+        type="number"
+        value="2000"
+        min="100"
+        placeholder="Enter amount"
       >
     </div>
 
-    <button class="filter-btn" id="filterBtn">
-      ☰ Filter
-    </button>
 
-  </div>
+    <h3>Payment Method</h3>
 
-  <div class="category-tabs">
+    <div class="payment-methods">
 
-    <button class="category-tab active" data-category="All">
-      All
-    </button>
-
-    <button class="category-tab" data-category="VPN">
-      VPN
-    </button>
-
-    <button class="category-tab" data-category="Texting">
-      Texting
-    </button>
-
-    <button class="category-tab" data-category="Social">
-      Social
-    </button>
-
-    <button class="category-tab" data-category="Streaming">
-      Streaming
-    </button>
-
-    <button class="category-tab" data-category="Tools">
-      Tools
-    </button>
-
-  </div>
-
-  <div id="marketplaceGrid" class="marketplace-grid"></div>
-
-</section>
-
-
-
-<!-- =========================
-     PRODUCT DETAILS
-========================= -->
-<section id="screen-product" class="app-screen">
-
-  <div class="product-page">
-
-    <button class="back-btn" data-screen="marketplace">
-      ← Back
-    </button>
-
-    <div class="product-detail-card">
-
-      <div class="product-detail-top">
-
-        <div class="product-large-icon" id="productIcon">
-          <img src="" alt="">
-        </div>
-
-        <div class="product-main-info">
-          <span class="product-category" id="productCategory">
-            VPN SERVICES
-          </span>
-
-          <h1 id="productTitle">
-            Product
-          </h1>
-
-          <p id="productDescription">
-            Product description.
-          </p>
-
-          <div class="product-price" id="productPrice">
-            ₦0.00
-          </div>
-
-          <div class="stock-status">
-            <span class="stock-dot"></span>
-            <span id="productStock">In Stock</span>
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="quantity-row">
-
-        <span>Quantity</span>
-
-        <div class="quantity-control">
-          <button id="qtyMinus">−</button>
-          <strong id="quantity">1</strong>
-          <button id="qtyPlus">+</button>
-        </div>
-
-      </div>
-
-
-      <div class="product-features">
-
-        <h3>Product Features</h3>
-
-        <ul id="productFeatures">
-          <li>Premium digital service</li>
-          <li>Compatible supported devices</li>
-          <li>Fast service</li>
-          <li>BigLogs support</li>
-        </ul>
-
-      </div>
-
-
-      <div class="product-purchase">
-
-        <div>
-          <small>Total</small>
-          <strong id="productTotal">₦0.00</strong>
-        </div>
-
-        <button class="primary-btn large-btn" id="buyNowBtn">
-          BUY NOW
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     INSUFFICIENT BALANCE
-========================= -->
-<section id="screen-insufficient" class="app-screen">
-
-  <div class="message-screen">
-
-    <div class="message-icon error-icon">
-      ×
-    </div>
-
-    <h1>Insufficient Balance</h1>
-
-    <p>
-      Your current wallet balance is
-      <strong id="insufficientBalance">₦0.00</strong>.
-    </p>
-
-    <p>
-      This purchase requires
-      <strong id="insufficientRequired">₦0.00</strong>.
-    </p>
-
-    <div class="message-actions">
-
-      <button class="primary-btn" data-screen="wallet">
-        FUND WALLET
-      </button>
-
-      <button class="secondary-btn" data-screen="product">
-        CANCEL
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     FUND WALLET
-========================= -->
-<section id="screen-wallet" class="app-screen">
-
-  <div class="page-heading">
-    <span class="eyebrow">WALLET</span>
-    <h1>Fund Wallet</h1>
-    <p>Add funds to your BigLogs wallet.</p>
-  </div>
-
-
-  <div class="wallet-page">
-
-    <div class="current-balance-card">
-
-      <div>
-        <span>Current Balance</span>
-        <strong id="walletBalance">₦2,250.00</strong>
-      </div>
-
-      <div class="wallet-big-icon">
-        ▣
-      </div>
-
-    </div>
-
-
-    <div class="fund-card">
-
-      <h3>Select Amount</h3>
-
-      <div class="amount-options">
-
-        <button data-amount="1000">₦1,000</button>
-        <button data-amount="2000">₦2,000</button>
-        <button data-amount="5000">₦5,000</button>
-        <button data-amount="10000">₦10,000</button>
-
-      </div>
-
-
-      <label for="fundAmount">
-        Or enter amount
+      <label>
+        <input type="radio" name="payment" checked>
+        <span>
+          <strong>Paystack</strong>
+          <small>Card, Bank, USSD</small>
+        </span>
       </label>
 
-      <div class="amount-input">
-        <span>₦</span>
-        <input
-          id="fundAmount"
-          type="number"
-          min="100"
-          placeholder="2000"
-        >
-      </div>
-
-
-      <h3>Payment Method</h3>
-
-      <div class="payment-methods">
-
-        <label class="payment-option selected">
-
-          <input
-            type="radio"
-            name="paymentMethod"
-            value="paystack"
-            checked
-          >
-
-          <span class="payment-method-icon">₿</span>
-
-          <div>
-            <strong>Paystack</strong>
-            <small>Card, Bank, USSD</small>
-          </div>
-
-          <span class="check">✓</span>
-
-        </label>
-
-
-        <label class="payment-option">
-
-          <input
-            type="radio"
-            name="paymentMethod"
-            value="flutterwave"
-          >
-
-          <span class="payment-method-icon">◉</span>
-
-          <div>
-            <strong>Flutterwave</strong>
-            <small>Card, Bank, USSD</small>
-          </div>
-
-          <span class="check">✓</span>
-
-        </label>
-
-      </div>
-
-
-      <button class="primary-btn full-btn" id="fundWalletBtn">
-        PROCEED TO PAY
-      </button>
+      <label>
+        <input type="radio" name="payment">
+        <span>
+          <strong>Flutterwave</strong>
+          <small>Card, Bank, USSD</small>
+        </span>
+      </label>
 
     </div>
+
+
+    <button class="primary-btn wallet-pay">
+      PROCEED TO PAY
+    </button>
 
   </div>
 
 </section>
 
 
+<!-- ORDERS -->
+<section id="orders" class="orders-section">
 
-<!-- =========================
-     PAYMENT SUCCESS
-========================= -->
-<section id="screen-payment-success" class="app-screen">
-
-  <div class="message-screen success-screen">
-
-    <div class="success-check">
-      ✓
-    </div>
-
-    <h1>Payment Successful!</h1>
-
-    <p>
-      Your wallet has been credited successfully.
-    </p>
-
-    <div class="new-balance-card">
-
-      <span>New Balance</span>
-
-      <strong id="newBalance">
-        ₦2,250.00
-      </strong>
-
-      <span class="wallet-small-icon">▣</span>
-
-    </div>
-
-
-    <div class="message-actions">
-
-      <button class="primary-btn" data-screen="marketplace">
-        CONTINUE SHOPPING
-      </button>
-
-      <button class="secondary-btn" data-screen="wallet">
-        VIEW WALLET
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     ORDER SUCCESS
-========================= -->
-<section id="screen-order-success" class="app-screen">
-
-  <div class="message-screen success-screen">
-
-    <div class="success-check">
-      ✓
-    </div>
-
-    <h1>Order Placed Successfully!</h1>
-
-    <p>
-      Your order has been placed and is being processed.
-    </p>
-
-
-    <div class="order-success-card">
-
-      <div>
-        <span>Order ID</span>
-        <strong id="successOrderId">#BL00000</strong>
-      </div>
-
-      <div>
-        <span>Product</span>
-        <strong id="successProduct">Product</strong>
-      </div>
-
-      <div>
-        <span>Amount</span>
-        <strong id="successAmount">₦0.00</strong>
-      </div>
-
-      <div>
-        <span>Status</span>
-        <b class="status-processing">
-          Processing
-        </b>
-      </div>
-
-    </div>
-
-
-    <div class="message-actions">
-
-      <button class="primary-btn" data-screen="orders">
-        VIEW MY ORDERS
-      </button>
-
-      <button class="secondary-btn" data-screen="marketplace">
-        CONTINUE SHOPPING
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     MY ORDERS
-========================= -->
-<section id="screen-orders" class="app-screen">
-
-  <div class="page-heading orders-heading">
+  <div class="section-head">
 
     <div>
-      <span class="eyebrow">ACCOUNT</span>
-      <h1>My Orders</h1>
-      <p>Track your purchases and delivery details.</p>
+      <span class="eyebrow">ORDER HISTORY</span>
+      <h2>My <em>Orders</em></h2>
     </div>
 
   </div>
 
 
   <div class="order-tabs">
-
-    <button class="order-tab active" data-status="all">
-      All Orders
-    </button>
-
-    <button class="order-tab" data-status="Pending">
-      Pending
-    </button>
-
-    <button class="order-tab" data-status="Processing">
-      Processing
-    </button>
-
-    <button class="order-tab" data-status="Completed">
-      Completed
-    </button>
-
-    <button class="order-tab" data-status="Cancelled">
-      Cancelled
-    </button>
-
+    <button class="active">All Orders</button>
+    <button>Pending</button>
+    <button>Processing</button>
+    <button>Completed</button>
+    <button>Cancelled</button>
   </div>
 
 
-  <div class="orders-table-wrapper">
+  <div class="orders-table-wrap">
 
-    <table class="orders-table">
+    <table>
 
       <thead>
         <tr>
@@ -714,7 +362,45 @@
         </tr>
       </thead>
 
-      <tbody id="ordersTableBody"></tbody>
+      <tbody>
+
+        <tr>
+          <td>#BL10294</td>
+          <td>NORD VPN 7 DAYS</td>
+          <td>₦390.00</td>
+          <td><span class="status completed">Completed</span></td>
+          <td>Aug 31, 2026</td>
+          <td><button class="view-order">View</button></td>
+        </tr>
+
+        <tr>
+          <td>#BL10255</td>
+          <td>TEXTPLUS LOGIN</td>
+          <td>₦945.00</td>
+          <td><span class="status completed">Completed</span></td>
+          <td>Aug 30, 2026</td>
+          <td><button class="view-order">View</button></td>
+        </tr>
+
+        <tr>
+          <td>#BL10220</td>
+          <td>EXPRESSVPN PC</td>
+          <td>₦4,000.00</td>
+          <td><span class="status processing">Processing</span></td>
+          <td>Aug 29, 2026</td>
+          <td><button class="view-order">View</button></td>
+        </tr>
+
+        <tr>
+          <td>#BL10188</td>
+          <td>USA FACEBOOK 0-50</td>
+          <td>₦1,200.00</td>
+          <td><span class="status completed">Completed</span></td>
+          <td>Aug 28, 2026</td>
+          <td><button class="view-order">View</button></td>
+        </tr>
+
+      </tbody>
 
     </table>
 
@@ -723,328 +409,121 @@
 </section>
 
 
+<!-- SUPPORT -->
+<section id="support" class="support">
 
-<!-- =========================
-     ORDER DETAILS / DELIVERY
-========================= -->
-<section id="screen-order-details" class="app-screen">
-
-  <div class="product-page">
-
-    <button class="back-btn" data-screen="orders">
-      ← My Orders
-    </button>
-
-
-    <div class="order-detail-page">
-
-      <div class="order-detail-header">
-
-        <div>
-          <span class="eyebrow">ORDER DETAILS</span>
-          <h1 id="detailOrderTitle">
-            Order Details
-          </h1>
-        </div>
-
-        <span id="detailOrderStatus" class="status-completed">
-          Completed
-        </span>
-
-      </div>
-
-
-      <div class="order-info-grid">
-
-        <div>
-          <span>Order ID</span>
-          <strong id="detailOrderId">#BL10294</strong>
-        </div>
-
-        <div>
-          <span>Date</span>
-          <strong id="detailOrderDate">Aug 31, 2026</strong>
-        </div>
-
-        <div>
-          <span>Amount</span>
-          <strong id="detailOrderAmount">₦390.00</strong>
-        </div>
-
-        <div>
-          <span>Payment Method</span>
-          <strong>Wallet Balance</strong>
-        </div>
-
-      </div>
-
-
-      <div class="delivery-card">
-
-        <div class="delivery-heading">
-          <div>
-            <span class="eyebrow">DELIVERY</span>
-            <h2>Delivery / Login Details</h2>
-          </div>
-
-          <span class="delivery-check">✓</span>
-        </div>
-
-
-        <div class="delivery-details">
-
-          <div>
-            <span>Product</span>
-            <strong id="deliveryProduct">
-              NORD VPN 7 DAYS
-            </strong>
-          </div>
-
-          <div>
-            <span>Username / Email</span>
-            <strong id="deliveryUsername">
-              —
-            </strong>
-          </div>
-
-          <div>
-            <span>Password</span>
-            <strong id="deliveryPassword">
-              —
-            </strong>
-          </div>
-
-          <div>
-            <span>Expiry</span>
-            <strong id="deliveryExpiry">
-              —
-            </strong>
-          </div>
-
-        </div>
-
-
-        <div class="delivery-instructions">
-
-          <h3>Instructions</h3>
-
-          <ol>
-            <li>Use the provided authorized account or service details.</li>
-            <li>Follow the setup instructions supplied by BigLogs support.</li>
-            <li>Contact support if you need assistance.</li>
-          </ol>
-
-        </div>
-
-      </div>
-
-    </div>
-
+  <div>
+    <span class="eyebrow">ALWAYS AVAILABLE</span>
+    <h2>Need help? <em>We're here.</em></h2>
+    <p>
+      Contact BigLogs support directly on Telegram for assistance
+      with your order or account.
+    </p>
   </div>
+
+  <a
+    class="primary-btn"
+    href="https://t.me/biglogs1"
+    target="_blank"
+    rel="noopener"
+  >
+    OPEN TELEGRAM →
+  </a>
 
 </section>
 
 
+<!-- SERVICE MODAL -->
+<div
+  id="serviceModal"
+  class="modal-backdrop"
+  aria-hidden="true"
+>
 
-<!-- =========================
-     ACCOUNT
-========================= -->
-<section id="screen-account" class="app-screen">
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
 
-  <div class="page-heading">
-    <span class="eyebrow">ACCOUNT</span>
-    <h1>My Account</h1>
-    <p>Manage your BigLogs account.</p>
-  </div>
+    <button
+      class="modal-close"
+      data-close
+      aria-label="Close"
+    >
+      ×
+    </button>
 
+    <div id="modalIcon" class="modal-icon"></div>
 
-  <div class="account-card">
+    <h3 id="modalTitle">Product</h3>
 
-    <div class="account-profile">
+    <p id="modalDesc"></p>
 
-      <div class="profile-avatar large">
-        B
-      </div>
+    <div id="modalPrice" class="modal-price"></div>
 
-      <div>
-        <h2>Bigbishop</h2>
-        <p>BigLogs customer</p>
-      </div>
+    <ul id="modalDetails"></ul>
 
-    </div>
+    <div class="modal-actions">
 
-
-    <div class="account-row">
-      <span>Email</span>
-      <strong>bigbishop@example.com</strong>
-    </div>
-
-    <div class="account-row">
-      <span>Account Status</span>
-      <b class="status-completed">Active</b>
-    </div>
-
-    <div class="account-row">
-      <span>Support</span>
       <a
+        id="modalOrder"
+        class="primary-btn"
         href="https://t.me/biglogs1"
         target="_blank"
         rel="noopener"
-        class="text-btn"
       >
-        Contact on Telegram →
+        ORDER ON TELEGRAM →
       </a>
+
+      <button
+        class="secondary-btn"
+        data-close
+      >
+        CLOSE
+      </button>
+
     </div>
 
   </div>
 
-</section>
+</div>
 
 </main>
 
 
+<!-- FOOTER -->
+<footer>
 
-<!-- =========================
-     MOBILE BOTTOM NAV
-========================= -->
-<nav class="bottom-nav">
-
-  <button class="bottom-link active" data-screen="home">
-    <span>⌂</span>
-    <small>Home</small>
-  </button>
-
-  <button class="bottom-link" data-screen="marketplace">
-    <span>▣</span>
-    <small>Market</small>
-  </button>
-
-  <button class="bottom-link" data-screen="orders">
-    <span>▤</span>
-    <small>Orders</small>
-  </button>
-
-  <button class="bottom-link" data-screen="wallet">
-    <span>▣</span>
-    <small>Wallet</small>
-  </button>
-
-  <button class="bottom-link" data-screen="account">
-    <span>♙</span>
-    <small>Account</small>
-  </button>
-
-</nav>
-
-
-
-<!-- =========================
-     PRODUCT MODAL
-========================= -->
-<div class="modal-backdrop" id="notificationModal">
-
-  <div class="app-modal small-modal">
-
-    <button class="modal-close" data-close="notificationModal">
-      ×
-    </button>
-
-    <div class="modal-icon">♧</div>
-
-    <h2>Notifications</h2>
-
-    <p>
-      You're all caught up. New order and wallet notifications will appear here.
-    </p>
-
-    <button class="primary-btn full-btn" data-close="notificationModal">
-      CLOSE
-    </button>
-
+  <div>
+    <b>BIGLOGS</b>
+    <span>BIGGER BEGINNINGS</span>
   </div>
 
-</div>
+  <p>
+    © 2026 BigLogs. All rights reserved.
+  </p>
+
+</footer>
 
 
-<!-- =========================
-     FILTER MODAL
-========================= -->
-<div class="modal-backdrop" id="filterModal">
-
-  <div class="app-modal small-modal">
-
-    <button class="modal-close" data-close="filterModal">
-      ×
-    </button>
-
-    <span class="eyebrow">FILTER</span>
-    <h2>Marketplace Filter</h2>
-
-    <div class="filter-options">
-
-      <button data-filter-category="All">
-        All Services
-      </button>
-
-      <button data-filter-category="VPN">
-        VPN Services
-      </button>
-
-      <button data-filter-category="Social">
-        Social Media
-      </button>
-
-      <button data-filter-category="Tools">
-        Digital Tools
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
+<!-- FLOATING TELEGRAM -->
+<a
+  class="floating-telegram"
+  href="https://t.me/biglogs1"
+  target="_blank"
+  rel="noopener"
+>
+  ✈
+  <span>
+    24/7<br>
+    SUPPORT
+  </span>
+</a>
 
 
-<!-- =========================
-     CART MODAL
-========================= -->
-<div class="modal-backdrop" id="cartModal">
-
-  <div class="app-modal">
-
-    <button class="modal-close" data-close="cartModal">
-      ×
-    </button>
-
-    <span class="eyebrow">YOUR CART</span>
-    <h2>Shopping Cart</h2>
-
-    <div id="cartItems" class="cart-items"></div>
-
-    <div class="cart-total">
-      <span>Total</span>
-      <strong id="cartTotal">₦0.00</strong>
-    </div>
-
-    <button class="primary-btn full-btn" id="cartCheckoutBtn">
-      CHECKOUT
-    </button>
-
-  </div>
-
-</div>
-
-
-<!-- =========================
-     GLOBAL TOAST
-========================= -->
-<div id="toast" class="toast"></div>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-<script src="scripts.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
